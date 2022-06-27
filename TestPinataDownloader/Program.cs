@@ -43,7 +43,6 @@ namespace TestPinataDownloader
                 Action<string> cout = (x) =>
                 {
                     Console.WriteLine(x);
-
                 };
 
                 Func<string, dynamic> get = (x) =>
@@ -51,6 +50,10 @@ namespace TestPinataDownloader
                     return JObject.Parse(client.DownloadString($"{api}{x}"));
                 };
 
+                if (!File.Exists("Bearer.jwt"))
+                {
+                    cout("You must add your Pinata JWT token to the file 'Bearer.jwt'.");
+                }
 
 
                 if (args.Length > 0 && args[0] == "RUN")
