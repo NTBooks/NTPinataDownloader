@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NTPD_Mac": {
+      "commandName": "Project",
+      "commandLineArgs": "DOWNLOAD"
+    }
+  }
+}
